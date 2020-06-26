@@ -25,7 +25,8 @@ export default class ImagePreview extends Component {
       animationType={'fade'}
       transparent={true}
       onRequestClose={close}
-      visible={visible}>
+      visible={visible}
+      supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}>
       <View style={[styles.overlay, overlayStyle]}>
         <TouchableWithoutFeedback onPress={close}>
           <Image indicator={indicator || ProgressBar} indicatorProps={this.props.indicatorProps} resizeMode={'contain'} source={source} style={[styles.image, imageStyle]} />
